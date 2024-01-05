@@ -16,7 +16,7 @@ uniform vec2 _vornoi_scroll_speed;
 
 group_uniforms Distortion;
 uniform sampler2D distortion;
-uniform float distortion_scale: hint_range(0.0, 1.0, 0.1) = 0.27;
+uniform float distortion_scale: hint_range(0.0, 1.0, 0.001) = 0.27;
 
 float randomf(vec2 uv) {
 	return (fract(sin(dot(uv.xy,
@@ -73,12 +73,14 @@ void fragment() {
     // Create a wave effect using fbm and voronoi noise
 	vec2 _distortion_sample = (texture(distortion, UV).xy * 2.0 - 1.0) * distortion_scale;
 	
-	float noise = noise (((UV + _noise_scroll_speed * TIME) * _noise_scale) + _distortion_sample);
-	noise = step(noise, cutoff);
+	float noise = noise (((UV + _noise_scroll_speed * TIME) * _noise_scale) + _distortion_sample * 3.0);
+	//noise = step(cutoff, noise);
 	
-	float vornoi = vornoi(UV + _vornoi_scroll_speed * TIME  + _distortion_sample * 0.6, _columns, _rows) * _vornoi_amplitude;
+	//float vornoi = vornoi(UV + _vornoi_scroll_speed * TIME  + _distortion_sample * 0.6, _columns, _rows) * _vornoi_amplitude;
+	float vornoi = vornoi(UV*noise, _columns, _rows) * _vornoi_amplitude;
+	//vornoi = vornoi > 0.1 ? 1.0 : 0.0;
 	
-    float wave = noise + vornoi;
+    float wave = vornoi;
 	
     // Apply the wave effect to the water color
     COLOR = waterColor + wave;

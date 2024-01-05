@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://d3bk6c558v548"]
 
-[ext_resource type="PackedScene" uid="uid://dfb07rrha55v3" path="res://player.tscn" id="1_uqc1w"]
+[ext_resource type="PackedScene" uid="uid://bj3gsbccnkwo1" path="res://player.tscn" id="1_uqc1w"]
 [ext_resource type="Material" uid="uid://l440spd104yq" path="res://water.tres" id="2_o6jfq"]
 
 [node name="Root" type="Node2D"]
@@ -11,3 +11,8 @@
 material = ExtResource("2_o6jfq")
 offset_right = 1152.0
 offset_bottom = 536.0
+
+[node name="Shore" type="ColorRect" parent="."]
+offset_top = 494.0
+offset_right = 1152.0
+offset_bottom = 645.0
