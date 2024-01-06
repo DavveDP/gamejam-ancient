@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://bj3gsbccnkwo1"]
 
-[ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_4xovr"]
-[ext_resource type="Texture2D" uid="uid://dahukw4i52ywb" path="res://ulrik.png" id="1_fv0us"]
-[ext_resource type="Script" path="res://SpearThrower.gd" id="1_ymy37"]
-[ext_resource type="PackedScene" uid="uid://cm1nafht0xtwd" path="res://aim_arrow.tscn" id="3_21u4q"]
+[ext_resource type="Script" path="res://Scripts/CharacterBody2D.gd" id="1_4xovr"]
+[ext_resource type="Texture2D" uid="uid://dahukw4i52ywb" path="res://Assets/ulrik.png" id="1_fv0us"]
+[ext_resource type="Script" path="res://Scripts/SpearThrower.gd" id="1_ymy37"]
+[ext_resource type="PackedScene" uid="uid://cm1nafht0xtwd" path="res://Scenes/aim_arrow.tscn" id="3_21u4q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8cdne"]
 size = Vector2(263, 431)

@@ -31,7 +31,7 @@ func resetCharge():
 	charge = 0.0
 
 func spawnSpear():
-	var spear_scene = preload("res://spear.tscn")
+	var spear_scene = preload("res://Scenes/spear.tscn")
 	var spear = spear_scene.instantiate()
 	spear.position = Vector2(0, -1000)
 	spear.apply_central_force(Vector2(0, -20000 ))
