@@ -16,6 +16,12 @@ script = ExtResource("1_4xovr")
 [node name="SpearThrower" type="Node2D" parent="CharacterBody2D"]
 script = ExtResource("1_ymy37")
 
+[node name="AimArrow" parent="CharacterBody2D/SpearThrower" instance=ExtResource("3_21u4q")]
+offset_left = -16.0
+offset_top = -226.0
+offset_right = -16.0
+offset_bottom = -226.0
+
 [node name="ThrowSpeedBar" type="ProgressBar" parent="CharacterBody2D/SpearThrower"]
 offset_left = -188.0
 offset_top = 228.0
@@ -29,9 +35,3 @@ shape = SubResource("RectangleShape2D_8cdne")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 texture = ExtResource("1_fv0us")
-
-[node name="AimArrow" parent="CharacterBody2D" instance=ExtResource("3_21u4q")]
-offset_left = -16.0
-offset_top = -226.0
-offset_right = -16.0
-offset_bottom = -226.0
