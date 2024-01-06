@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://8pj7acllu5ft"]
+
+[ext_resource type="Texture2D" uid="uid://cy0golfv1h7jx" path="res://Spear.png" id="1_lp5l3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2r0l0"]
+size = Vector2(79, 436)
+
+[node name="RigidBody2D" type="RigidBody2D"]
+scale = Vector2(-0.204976, 0.331534)
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4.5, 14)
+shape = SubResource("RectangleShape2D_2r0l0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_lp5l3")
+
+[node name="Spear" type="Node2D" parent="."]
