@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dahukw4i52ywb"
-path="res://.godot/imported/ulrik.png-45d3ccf123428d60ad27229ad9b3ef57.ctex"
+uid="uid://lkhf4ae2sqgn"
+path="res://.godot/imported/AimArrow.png-3dae58a1a049a4fa2514acdb5dc94686.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ulrik.png"
-dest_files=["res://.godot/imported/ulrik.png-45d3ccf123428d60ad27229ad9b3ef57.ctex"]
+source_file="res://Assets/AimArrow.png"
+dest_files=["res://.godot/imported/AimArrow.png-3dae58a1a049a4fa2514acdb5dc94686.ctex"]
 
 [params]
 

@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://bj3gsbccnkwo1"]
+
+[ext_resource type="Script" path="res://Scripts/CharacterBody2D.gd" id="1_4xovr"]
+[ext_resource type="Texture2D" uid="uid://dahukw4i52ywb" path="res://Assets/ulrik.png" id="1_fv0us"]
+[ext_resource type="Script" path="res://Scripts/SpearThrower.gd" id="1_ymy37"]
+[ext_resource type="PackedScene" uid="uid://cm1nafht0xtwd" path="res://Scenes/aim_arrow.tscn" id="3_21u4q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8cdne"]
+size = Vector2(263, 431)
+
+[node name="Player" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_4xovr")
+
+[node name="SpearThrower" type="Node2D" parent="CharacterBody2D"]
+script = ExtResource("1_ymy37")
+
+[node name="ThrowSpeedBar" type="ProgressBar" parent="CharacterBody2D/SpearThrower"]
+offset_left = -188.0
+offset_top = 228.0
+offset_right = 190.0
+offset_bottom = 263.0
+show_percentage = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-13, -11)
+shape = SubResource("RectangleShape2D_8cdne")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_fv0us")
+
+[node name="AimArrow" parent="CharacterBody2D" instance=ExtResource("3_21u4q")]
+offset_left = -16.0
+offset_top = -226.0
+offset_right = -16.0
+offset_bottom = -226.0

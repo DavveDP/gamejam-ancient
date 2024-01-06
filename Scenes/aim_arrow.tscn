@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cm1nafht0xtwd"]
 
-[ext_resource type="Script" path="res://AimArrow.gd" id="1_vdt8x"]
-[ext_resource type="Texture2D" uid="uid://lkhf4ae2sqgn" path="res://AimArrow.png" id="2_vx6ic"]
+[ext_resource type="Script" path="res://Scripts/AimArrow.gd" id="1_6odm1"]
+[ext_resource type="Texture2D" uid="uid://lkhf4ae2sqgn" path="res://Assets/AimArrow.png" id="2_0xumo"]
 
 [node name="AimArrow" type="Control"]
 layout_mode = 3
@@ -12,8 +12,8 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-script = ExtResource("1_vdt8x")
+script = ExtResource("1_6odm1")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-texture = ExtResource("2_vx6ic")
+texture = ExtResource("2_0xumo")
 offset = Vector2(1.5, -220)

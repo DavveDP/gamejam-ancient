@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://bvn38npq3piax"]
 
-[ext_resource type="Script" path="res://fish_spawner.gd" id="1_io4mr"]
-[ext_resource type="Texture2D" uid="uid://bipeyftoscedm" path="res://Fish.png" id="2_mtcy6"]
+[ext_resource type="Script" path="res://Scripts/fish_spawner.gd" id="1_j572i"]
+[ext_resource type="Texture2D" uid="uid://bipeyftoscedm" path="res://Assets/Fish.png" id="2_yskoa"]
 
 [node name="FishSpawner" type="Node2D"]
-script = ExtResource("1_io4mr")
+script = ExtResource("1_j572i")
 
 [node name="SpawnArea" type="ReferenceRect" parent="."]
 offset_right = 1148.0
@@ -14,31 +14,31 @@ editor_only = false
 [node name="FishPool" type="Node2D" parent="."]
 
 [node name="Fish" type="Sprite2D" parent="FishPool"]
-texture = ExtResource("2_mtcy6")
+texture = ExtResource("2_yskoa")
 
 [node name="Fish2" type="Sprite2D" parent="FishPool"]
-texture = ExtResource("2_mtcy6")
+texture = ExtResource("2_yskoa")
 
 [node name="Fish3" type="Sprite2D" parent="FishPool"]
-texture = ExtResource("2_mtcy6")
+texture = ExtResource("2_yskoa")
 
 [node name="Fish4" type="Sprite2D" parent="FishPool"]
-texture = ExtResource("2_mtcy6")
+texture = ExtResource("2_yskoa")
 
 [node name="Fish5" type="Sprite2D" parent="FishPool"]
-texture = ExtResource("2_mtcy6")
+texture = ExtResource("2_yskoa")
 
 [node name="Fish6" type="Sprite2D" parent="FishPool"]
-texture = ExtResource("2_mtcy6")
+texture = ExtResource("2_yskoa")
 
 [node name="Fish7" type="Sprite2D" parent="FishPool"]
-texture = ExtResource("2_mtcy6")
+texture = ExtResource("2_yskoa")
 
 [node name="Fish8" type="Sprite2D" parent="FishPool"]
-texture = ExtResource("2_mtcy6")
+texture = ExtResource("2_yskoa")
 
 [node name="Fish9" type="Sprite2D" parent="FishPool"]
-texture = ExtResource("2_mtcy6")
+texture = ExtResource("2_yskoa")
 
 [node name="Fish10" type="Sprite2D" parent="FishPool"]
-texture = ExtResource("2_mtcy6")
+texture = ExtResource("2_yskoa")
