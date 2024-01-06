@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bvn38npq3piax"]
+[gd_scene load_steps=4 format=3 uid="uid://bvn38npq3piax"]
 
 [ext_resource type="Script" path="res://Scripts/fish_spawner.gd" id="1_j572i"]
 [ext_resource type="Texture2D" uid="uid://bipeyftoscedm" path="res://Assets/Fish.png" id="2_yskoa"]
@@ -7,11 +7,13 @@
 script = ExtResource("1_j572i")
 
 [node name="SpawnArea" type="ReferenceRect" parent="."]
-offset_right = 1148.0
-offset_bottom = 642.0
+offset_right = 256.0
+offset_bottom = 256.0
+scale = Vector2(4.484, 4.484)
 editor_only = false
 
 [node name="FishPool" type="Node2D" parent="."]
+visible = false
 
 [node name="Fish" type="Sprite2D" parent="FishPool"]
 texture = ExtResource("2_yskoa")

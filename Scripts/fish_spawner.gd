@@ -1,3 +1,4 @@
+@tool
 extends Node2D
 
 var fish_pool: Array = [20]
@@ -9,12 +10,11 @@ func _ready():
 	fish_pool = get_all_fish()
 	fish_pool.map(disable_node)
 
-func get_all_fish():
-	return $FishPool.get_children().filter(func(n): return n is Sprite2D)
-
 var accumulated_time = 0.0
 
 func _process(delta):
+	if Engine.is_editor_hint():
+		return
 
 	accumulated_time += delta
 	if (accumulated_time < 1):
@@ -25,6 +25,9 @@ func _process(delta):
 	var fish = spawn_random_fish()
 	var timer = get_tree().create_timer(fish_lifetime)
 	timer.timeout.connect(func(): despawn_fish(fish))
+
+func get_all_fish():
+	return $FishPool.get_children().filter(func(n): return n is Sprite2D)
 
 func spawn_random_fish() -> Node:
 	#Move a free fish from the pool to the active fish dictionary with a lifetime timer
@@ -54,3 +57,12 @@ func enable_node(node: Node):
 func disable_node(node: Node):
 	node.hide();
 	node.process_mode = Node.PROCESS_MODE_DISABLED;
+
+func set_spawn_area(rect_node: Sprite2D):
+	spawn_area.set_size(
+		Vector2(
+			rect_node.texture.get_width() * rect_node.scale.x, 
+			rect_node.texture.get_height() * rect_node.scale.y
+		))
+
+	spawn_area.set_position(rect_node.position)
