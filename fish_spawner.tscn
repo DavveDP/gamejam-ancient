@@ -8,7 +8,7 @@ script = ExtResource("1_io4mr")
 
 [node name="SpawnArea" type="ReferenceRect" parent="."]
 offset_right = 1148.0
-offset_bottom = 640.0
+offset_bottom = 642.0
 editor_only = false
 
 [node name="FishPool" type="Node2D" parent="."]

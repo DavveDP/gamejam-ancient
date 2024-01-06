@@ -21,9 +21,10 @@ func _process(delta):
 		return
 	
 	accumulated_time = 0.0
+
 	var fish = spawn_random_fish()
-	var timer = get_tree().create_timer(fish_lifetime).timeout
-	timer.connect(func(): despawn_fish(fish))
+	var timer = get_tree().create_timer(fish_lifetime)
+	timer.timeout.connect(func(): despawn_fish(fish))
 
 func spawn_random_fish() -> Node:
 	#Move a free fish from the pool to the active fish dictionary with a lifetime timer
