@@ -1,10 +1,9 @@
-@tool
 extends Node2D
 
 var fish_pool: Array = [20]
 var active_fish: Array = [20]
 @export var fish_lifetime: float = 2.0
-@onready var spawn_area: ReferenceRect = $SpawnArea
+@export var spawn_area: NodePath = NodePath()
 
 func _ready():
 	fish_pool = get_all_fish()
@@ -12,9 +11,7 @@ func _ready():
 
 var accumulated_time = 0.0
 
-func _process(delta):
-	if Engine.is_editor_hint():
-		return
+func _process(delta):	
 
 	accumulated_time += delta
 	if (accumulated_time < 1):
@@ -33,7 +30,7 @@ func spawn_random_fish() -> Node:
 	#Move a free fish from the pool to the active fish dictionary with a lifetime timer
 	var free_fish = move_element(fish_pool.front(), fish_pool, active_fish)
 	#Set it at a random position within the spawn area
-	free_fish.position = get_random_rect_position(spawn_area.get_rect())
+	free_fish.position = get_random_rect_position($spawn_area.get_rect())
 	#Enable it
 	enable_node(free_fish)
 	return free_fish
@@ -59,10 +56,10 @@ func disable_node(node: Node):
 	node.process_mode = Node.PROCESS_MODE_DISABLED;
 
 func set_spawn_area(rect_node: Sprite2D):
-	spawn_area.set_size(
+	$spawn_area.set_size(
 		Vector2(
 			rect_node.texture.get_width() * rect_node.scale.x, 
 			rect_node.texture.get_height() * rect_node.scale.y
 		))
 
-	spawn_area.set_position(rect_node.position)
+	$spawn_area.set_position(rect_node.position)

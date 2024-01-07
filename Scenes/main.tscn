@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://1cs8a323cf1f"]
+[gd_scene load_steps=9 format=3 uid="uid://1cs8a323cf1f"]
 
 [ext_resource type="PackedScene" uid="uid://bj3gsbccnkwo1" path="res://Scenes/player.tscn" id="1_lgg6t"]
-[ext_resource type="Material" uid="uid://l440spd104yq" path="res://water.tres" id="2_3jja6"]
-[ext_resource type="Texture2D" uid="uid://cvo0kvblrl7e0" path="res://water_diffuse.png" id="3_d2154"]
-[ext_resource type="Script" path="res://Scenes/water.gd" id="4_t6tbf"]
+[ext_resource type="Material" uid="uid://l440spd104yq" path="res://Materials/water.tres" id="2_3jja6"]
+[ext_resource type="Texture2D" uid="uid://b2umi72vj8ai2" path="res://Materials/water.png" id="3_sols5"]
+[ext_resource type="Script" path="res://Scripts/auto_aspect.gd" id="4_t6tbf"]
 [ext_resource type="PackedScene" uid="uid://bvn38npq3piax" path="res://Scenes/fish_spawner.tscn" id="5_u0iet"]
+[ext_resource type="Material" uid="uid://bhw6fdksg2q4c" path="res://Materials/sand.tres" id="6_7hfq1"]
+[ext_resource type="Texture2D" uid="uid://c7yitewrp0mpm" path="res://Materials/sand.png" id="6_gbgbe"]
+[ext_resource type="Material" uid="uid://cmrfe1rbgmrl8" path="res://Materials/shoreline.tres" id="8_tk0i2"]
 
 [node name="main" type="Node2D"]
 
@@ -13,14 +16,36 @@ position = Vector2(540, 546)
 scale = Vector2(0.320384, 0.320384)
 
 [node name="Water" type="Sprite2D" parent="."]
+z_index = -1
 texture_repeat = 2
 material = ExtResource("2_3jja6")
-scale = Vector2(4.09766, 1.77344)
-texture = ExtResource("3_d2154")
+position = Vector2(-0.013042, 0)
+scale = Vector2(2.2344, 1.03516)
+texture = ExtResource("3_sols5")
 centered = false
 script = ExtResource("4_t6tbf")
 
 [node name="FishSpawner" parent="." instance=ExtResource("5_u0iet")]
+visible = false
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+
+[node name="Beach" type="Sprite2D" parent="."]
+z_index = -2
+texture_repeat = 2
+material = ExtResource("6_7hfq1")
+position = Vector2(3, 534)
+scale = Vector2(2.23047, 0.201172)
+texture = ExtResource("6_gbgbe")
+centered = false
+script = ExtResource("4_t6tbf")
+
+[node name="Shoreline" type="Sprite2D" parent="."]
+z_index = -1
+material = ExtResource("8_tk0i2")
+position = Vector2(574.438, 531)
+scale = Vector2(2.22827, 0.226562)
+texture = ExtResource("6_gbgbe")
 
 [connection signal="item_rect_changed" from="Water" to="Water" method="set_aspect_ratio"]
-[connection signal="item_rect_changed" from="Water" to="FishSpawner" method="set_spawn_area"]
+[connection signal="item_rect_changed" from="Beach" to="Beach" method="set_aspect_ratio"]

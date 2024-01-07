@@ -1,0 +1,6 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cmrfe1rbgmrl8"]
+
+[ext_resource type="Shader" path="res://Materials/shoreline.gdshader" id="1_l6tvj"]
+
+[resource]
+shader = ExtResource("1_l6tvj")
