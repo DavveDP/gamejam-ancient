@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bhw6fdksg2q4c"]
+
+[ext_resource type="Shader" path="res://Materials/sand_shader.gdshader" id="1_fywbr"]
+
+[resource]
+shader = ExtResource("1_fywbr")
+shader_parameter/aspect_ratio = 0.0901928
+shader_parameter/tiling = Vector2(50, 5)

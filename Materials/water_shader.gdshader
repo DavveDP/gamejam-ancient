@@ -14,7 +14,7 @@ void fragment() {
 	tiled_uvs.y *= aspect_ratio;
 	
 	vec2 time_offset;
-	time_offset.x = cos((TIME + tiled_uvs.x + tiled_uvs.y) * 1.0) * 0.05;
+	time_offset.x = cos((TIME + tiled_uvs.x + tiled_uvs.y) * 1.2) * 0.05;
 	
 	vec2 _distortion_sample = (texture(distortion, UV + time_offset).xy * 2.0 - 1.0) * distortion_scale;
 	

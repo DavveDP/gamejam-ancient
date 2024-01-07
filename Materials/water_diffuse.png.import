@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvo0kvblrl7e0"
-path="res://.godot/imported/water_diffuse.png-90e6bcf70df4eb728d5c1dd9474d4754.ctex"
+path="res://.godot/imported/water_diffuse.png-ed566cefb54b8fd5060948dec5ae38c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://water_diffuse.png"
-dest_files=["res://.godot/imported/water_diffuse.png-90e6bcf70df4eb728d5c1dd9474d4754.ctex"]
+source_file="res://Materials/water_diffuse.png"
+dest_files=["res://.godot/imported/water_diffuse.png-ed566cefb54b8fd5060948dec5ae38c3.ctex"]
 
 [params]
 

@@ -1,12 +1,12 @@
 [gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://l440spd104yq"]
 
-[ext_resource type="Shader" path="res://water_shader.gdshader" id="1_ijct3"]
-[ext_resource type="Texture2D" uid="uid://djl8rfifbe4tx" path="res://water_distortion.png" id="2_iav1a"]
+[ext_resource type="Shader" path="res://Materials/water_shader.gdshader" id="1_ijct3"]
+[ext_resource type="Texture2D" uid="uid://djl8rfifbe4tx" path="res://Materials/water_distortion.png" id="2_iav1a"]
 
 [resource]
 shader = ExtResource("1_ijct3")
 shader_parameter/speed = 10.0
-shader_parameter/aspect_ratio = 0.39547
+shader_parameter/aspect_ratio = 0.417108
 shader_parameter/tiling = Vector2(5, 5)
 shader_parameter/distortion_scale = 0.069
 shader_parameter/distortion = ExtResource("2_iav1a")
