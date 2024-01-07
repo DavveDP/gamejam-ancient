@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bvn38npq3piax"]
+[gd_scene load_steps=3 format=3 uid="uid://bvn38npq3piax"]
 
 [ext_resource type="Script" path="res://Scripts/fish_spawner.gd" id="1_j572i"]
 [ext_resource type="Texture2D" uid="uid://bipeyftoscedm" path="res://Assets/Fish.png" id="2_yskoa"]
@@ -16,31 +16,51 @@ editor_only = false
 visible = false
 
 [node name="Fish" type="Sprite2D" parent="FishPool"]
+process_mode = 4
+visible = false
 texture = ExtResource("2_yskoa")
 
 [node name="Fish2" type="Sprite2D" parent="FishPool"]
+process_mode = 4
+visible = false
 texture = ExtResource("2_yskoa")
 
 [node name="Fish3" type="Sprite2D" parent="FishPool"]
+process_mode = 4
+visible = false
 texture = ExtResource("2_yskoa")
 
 [node name="Fish4" type="Sprite2D" parent="FishPool"]
+process_mode = 4
+visible = false
 texture = ExtResource("2_yskoa")
 
 [node name="Fish5" type="Sprite2D" parent="FishPool"]
+process_mode = 4
+visible = false
 texture = ExtResource("2_yskoa")
 
 [node name="Fish6" type="Sprite2D" parent="FishPool"]
+process_mode = 4
+visible = false
 texture = ExtResource("2_yskoa")
 
 [node name="Fish7" type="Sprite2D" parent="FishPool"]
+process_mode = 4
+visible = false
 texture = ExtResource("2_yskoa")
 
 [node name="Fish8" type="Sprite2D" parent="FishPool"]
+process_mode = 4
+visible = false
 texture = ExtResource("2_yskoa")
 
 [node name="Fish9" type="Sprite2D" parent="FishPool"]
+process_mode = 4
+visible = false
 texture = ExtResource("2_yskoa")
 
 [node name="Fish10" type="Sprite2D" parent="FishPool"]
+process_mode = 4
+visible = false
 texture = ExtResource("2_yskoa")

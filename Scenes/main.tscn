@@ -9,10 +9,12 @@
 [node name="main" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_lgg6t")]
+z_index = 1
 position = Vector2(540, 546)
 scale = Vector2(0.320384, 0.320384)
 
 [node name="Water" type="Sprite2D" parent="."]
+visible = false
 texture_repeat = 2
 material = ExtResource("2_3jja6")
 scale = Vector2(4.09766, 1.77344)
